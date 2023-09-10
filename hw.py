@@ -50,17 +50,17 @@ def get_longest_uniq_length(origin: str, /) -> int:
     """
     max_length = 0
     current_length = 0
-    symbols = set()
+    symbols = []
 
     for i in origin:
         if i not in symbols:
             current_length += 1
-            symbols.add(i)
+            symbols.append(i)
         else:
             if current_length > max_length:
                 max_length = current_length
             current_length = 1
-            symbols = {i}
+            symbols = [i]
 
     if current_length > max_length:
         max_length = current_length
