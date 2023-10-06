@@ -69,6 +69,3 @@ print(developer1)  # Вывод информации о developer1
 
 developer2 = developer1._add__(developer)  # Конкатенация developer1 и developer
 print(developer2)  # Вывод информации о developer2
-
-
-
