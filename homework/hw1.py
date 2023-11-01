@@ -10,12 +10,8 @@ def is_palindrome(origin: Union[str, int], /) -> bool:
     >>> assert is_palindrome("abc") is False
     >>> assert is_palindrome(12345) is False
     >>> assert is_palindrome(12321) is True
-    >>> assert is_palindrome("Hannah") is True
-    >>> assert is_palindrome("Do geese see God?") is True
     """
     origin = str(origin)
-    origin = origin.lower()
-    origin = "".join(c for c in origin if c.isalnum())  # Убрать из строки все спец символы
     return origin == origin[::-1]
 
 # 3 задание
